@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi regalo de san valentín 🌷</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="intro">
+    <h1>Te regalo unos tulipanes.</h1>
+    <p>Quizás no es un ramo enorme, pero son tulipanes a mi manera.</p>
+  </div>
+
+  <div class="bouquet">
+    <svg viewBox="0 0 400 500" class="bouquet-svg">
+
+      <defs>
+        <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+        </filter>
+      </defs>
+
+      <!-- TALLOS -->
+      <path d="M200 470 C170 360, 140 280, 130 190"
+            stroke="#3a7d44" stroke-width="8" fill="none"/>
+
+      <path d="M200 470 C200 360, 200 280, 200 180"
+            stroke="#3a7d44" stroke-width="8" fill="none"/>
+
+      <path d="M200 470 C230 360, 260 280, 270 190"
+            stroke="#3a7d44" stroke-width="8" fill="none"/>
+
+      <ellipse cx="200" cy="475" rx="12" ry="8" fill="#2e7d32"/>
+
+      <!-- FLOR IZQUIERDA -->
+      <g class="tulip" transform="translate(80,90)">
+        <circle class="click-area" cx="50" cy="95" r="75" fill="transparent"/>
+        <g class="petals">
+          <path class="petal petal-1" data-type="text" data-content="Eres lo que quiero en mi futuro." d="M50 85 C30 40, 10 70, 35 115 C40 125, 60 125, 65 115 C90 70, 70 40, 50 85 Z"/>
+          <path class="petal petal-2" data-type="image" data-content="img/foto1.jpeg" d="M50 60 C35 80, 40 120, 50 130 C60 120, 65 80, 50 60 Z"/>
+          <path class="petal petal-3" data-type="text" data-content="Quiero que hagamos más viajes juntos." d="M50 85 C70 40, 90 70, 65 115 C60 125, 40 125, 35 115 C10 70, 30 40, 50 85 Z"/>
+          <path class="petal petal-4" data-type="image" data-content="img/foto2.jpeg" d="M50 72 C40 55, 60 55, 50 105 Z"/>
+        </g>
+      </g>
+
+      <!-- FLOR CENTRO -->
+      <g class="tulip" transform="translate(150,70)">
+        <circle class="click-area" cx="50" cy="95" r="75" fill="transparent"/>
+        <g class="petals">
+          <path class="petal petal-1" data-type="text" data-content="Me haces sentir en casa." d="M50 85 C30 40, 10 70, 35 115 C40 125, 60 125, 65 115 C90 70, 70 40, 50 85 Z"/>
+          <path class="petal petal-2" data-type="image" data-content="img/foto3.jpeg" d="M50 60 C35 80, 40 120, 50 130 C60 120, 65 80, 50 60 Z"/>
+          <path class="petal petal-3" data-type="text" data-content="Adoro compartir el tiempo contigo." d="M50 85 C70 40, 90 70, 65 115 C60 125, 40 125, 35 115 C10 70, 30 40, 50 85 Z"/>
+          <path class="petal petal-4" data-type="image" data-content="img/foto4.jpeg" d="M50 72 C40 55, 60 55, 50 105 Z"/>
+        </g>
+      </g>
+
+      <!-- FLOR DERECHA -->
+      <g class="tulip" transform="translate(220,90)">
+        <circle class="click-area" cx="50" cy="95" r="75" fill="transparent"/>
+        <g class="petals">
+          <path class="petal petal-1" data-type="text" data-content="Eres lo más bonito que podría ver." d="M50 85 C30 40, 10 70, 35 115 C40 125, 60 125, 65 115 C90 70, 70 40, 50 85 Z"/>
+          <path class="petal petal-2" data-type="image" data-content="img/foto5.jpeg" d="M50 60 C35 80, 40 120, 50 130 C60 120, 65 80, 50 60 Z"/>
+          <path class="petal petal-3" data-type="text" data-content="Te amo Muchísimo Mel." d="M50 85 C70 40, 90 70, 65 115 C60 125, 40 125, 35 115 C10 70, 30 40, 50 85 Z"/>
+          <path class="petal petal-4" data-type="image" data-content="img/foto6.jpeg" d="M50 72 C40 55, 60 55, 50 105 Z"/>
+        </g>
+      </g>
+
+    </svg>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <div class="modal-content">
+      <span id="close">X</span>
+      <div id="dynamic-content"></div>
+    </div>
+  </div>
+
+  <!-- VENTANA FINAL -->
+<div id="final-screen">
+  <div class="final-content">
+    <h2>Feliz San Valentín amor ❤️</h2>
+    <p>
+      Todos los momentos compartidos son especiales para mí.  
+      Y esto, espero, sea solo el principio.
+    </p>
+
+    <div class="final-buttons">
+      <button id="restart">Volver a empezar</button>
+      <button id="close-final">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
