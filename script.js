@@ -22,8 +22,13 @@ tulips.forEach(tulip => {
   let openedCount = 0;
 
   // Abrir pétalos progresivamente
-  tulip.addEventListener('click', () => {
-    if (openedCount < flowerPetals.length) {
+  tulip.addEventListener('click', (e) => {
+
+    // Si pulsa directamente en un pétalo abierto,
+    // dejamos que el evento del pétalo lo maneje
+    if (e.target.classList.contains('petal')) return;
+
+   if (openedCount < flowerPetals.length) {
       flowerPetals[openedCount].classList.add('open');
       openedCount++;
     }

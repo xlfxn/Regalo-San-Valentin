@@ -308,3 +308,13 @@ body {
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
+
+.click-area {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .petal {
+    stroke-width: 3;
+  }
+}
